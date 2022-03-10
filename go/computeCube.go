@@ -15,6 +15,18 @@ func SumOfNextNOddInts(startNumber, n int) int {
 }
 
 
+// returns a slice containing the next n odd integers, starting from a given number called startNumber. This begins
+//with startNumber
+func nextNOddInts(startNumber, n int) []int {
+	result := []int{}
+	for i := 0; i < n; i++ {
+		result = append(result, startNumber+2*i)
+	}
+	return result
+}
+
+
+
 func main() {
 	fmt.Println(SumOfNextNOddInts(5, 3))  //just a test
 }
