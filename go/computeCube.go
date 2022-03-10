@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 
-//returns the cube of the next n odd integers, starting from an input int. This
-//includes the starting number
+//returns the sum  of the next n odd integers, starting from a given number called startNumber. This begins with
+//the starting number
 func SumOfNextNOddInts(startNumber, n int) int {
 	result := startNumber
 	for i := 1; i < n; i++ {
