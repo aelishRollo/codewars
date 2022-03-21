@@ -11,13 +11,13 @@ func HarvesterRescue(data Data) string {
 	
   fmt.Println(data)
   
-  wormDistance := math.Sqrt(math.Pow(data.Harvester[0][0] - data.Worm[0][0], 2) + math.Pow(data.Harvester[0][1] - data.Worm[0][1], 2)) 
+  wormDistance := math.Sqrt(math.Pow(float64(data.Harvester[0] - data.Worm[0]), 2) + math.Pow(float64(data.Harvester[0] - data.Worm[0]), 2)) 
   
-  carryallDistance := math.Sqrt(math.Pow(data.Harvester[0][0] - data.Carryall[0][0], 2) + math.Pow(data.Harvester[0][1] - data.Carryall[0][1], 2))
+  carryallDistance := math.Sqrt(math.Pow(float64(data.Harvester[0] - data.Carryall[0]), 2) + math.Pow(float64(data.Harvester[0] - data.Carryall[0]), 2))
   
-  wormTime := wormDistance / data.Worm[1]
+  wormTime := wormDistance / float64(data.Worm[1])
   
-  carryallTime := carryallDistance / data.Carryall[1]
+  carryallTime := carryallDistance / float64(data.Carryall[1])
   
   if wormTime < 1 + carryallTime {
     result = "Damn the spice! I'll rescue the miners!"
