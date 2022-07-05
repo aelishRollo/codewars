@@ -30,3 +30,15 @@ func getNumFromString(a string) int { // given a string, returns the numbers wit
 	}
 	return result
 }
+
+
+func intsFromSliceOfStrings(a []string) []int {		//given a slice of strings (which contain ints as their runes), returns a slice containing only the ints
+	result := []int{}
+	fmt.Println(a)
+	for i := 0; i < len(a); i++ {
+		result = append(result, getNumFromString(a[i]))
+
+	}
+	return result
+}
+
