@@ -13,20 +13,19 @@ func consequtive(r []int, n int) bool { //check if the nth element of r and the 
 	return result
 }
 
-func range(r []int, i int) s string {
-	count := 0
-	result := ""
-	result += r[i]
+func nextNconsequtive(r []int, i int) int {  //returns how many consequtive numbers there are, beginning with (including) r[i] 
 	keepGoing := true
+	result := 0
+	n := i
 	for keepGoing {
-		if consequtive(r,i) {
-			count++
+		if consequtive(r, n) {
+			result++
+			n++
 		} else {
 			keepGoing = false
-			
 		}
-		
 	}
+	return result + 1
 }
 
 func main() {
