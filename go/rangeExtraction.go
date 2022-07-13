@@ -28,11 +28,26 @@ func nextNconsequtive(r []int, i int) int {  //returns how many consequtive numb
 	return result + 1
 }
 
+
+//use the nextNConsequtive function, convert however many consequtives there are to an output string
+
+func consequtiveNumsToRange(r []int, n int) string { 	//sort of functions, works only for n = 0 currently
+	result := ""
+	for i := n; i < nextNconsequtive(r, n); i++ {
+		result += strconv.Itoa(r[i])
+	}
+	return result
+}
+
+
+
 func main() {
 
 	A := []int{0, 1, 2, 3, 4,6,7,8,65}
 
 	fmt.Println(consequtive(A, 0))
+	fmt.Println(consequtive(A, 5))
+	fmt.Println(consequtiveNumsToRange(A, 5))
 }
 
 //scan through all the numbers and check for ranges. If there's a range, then append that range to the result. Otherwise just add each thing to the result
