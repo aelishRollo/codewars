@@ -29,13 +29,16 @@ func nextNconsequtive(r []int, i int) int {  //returns how many consequtive numb
 }
 
 
-//use the nextNConsequtive function, convert however many consequtives there are to an output string
+//use the nextNConsequtive function, convert however many consequtives there are to an output string, as a range
 
-func consequtiveNumsToRange(r []int, n int) string { 	//sort of functions, works only for n = 0 currently
+func consequtiveNumsToRange(r []int, start int) string { // currently returns all the numbers in the range as a string. Just need to tweak a bit to return the desired range
 	result := ""
-	for i := n; i < nextNconsequtive(r, n); i++ {
-		result += strconv.Itoa(r[i])
+	n := start
+	for i := 0; i < nextNconsequtive(r, start); i++ {
+		result += strconv.Itoa(r[n])
+		n++
 	}
+
 	return result
 }
 
@@ -55,4 +58,3 @@ func main() {
 //How to detect a range? Have a function check if the next element is the incremented current element. That's one function, consequtive(n int) bool{}
 // next have func range(r []int) s string{} which returns the range, or an empty string if it's not a range
 //It would reutn a range by checking for consequtives, continuing as long as they are consequtive. Once a false is returned, make r[i] the end cap of the string, with the starting position the beginning
-
