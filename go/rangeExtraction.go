@@ -31,8 +31,8 @@ func nextNconsequtive(r []int, i int) int {  //returns how many consequtive numb
 
 //use the nextNConsequtive function, convert however many consequtives there are to an output string, as a range
 
-func consequtiveNumsToRange(r []int, start int) string { // currently returns all the numbers in the range as a string. Just need to tweak a bit to return the desired range
-	result := ""
+func consequtiveNumsToRange(r []int, start int) string { // currently returns all the numbers in the range as a string. Works right, just need to return a range instead
+	result := ""		//Just need to make it return the first and last member of the range, connected by a hyphen, rather than concatenated digits
 	n := start
 	for i := 0; i < nextNconsequtive(r, start); i++ {
 		result += strconv.Itoa(r[n])
