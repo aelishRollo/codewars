@@ -50,6 +50,38 @@ func consequtiveNumsToRange(r []int, start int) string { //returns a the range w
 
 
 
+func Solution(list []int) string {
+	result := ""
+	a := 0
+	b := 0
+	err := errors.New("Oh no, looks like something went wrong. How tragic. This is an objectivly good error message. Very informative.")
+	err1 := errors.New("Woe is me. Another error. Looks like you've really outdone yourself this time.")
+	incrementValue := 0
+	for i := 0; i < len(list)-1; i++ {
+		if !(consequtive(list, i)) { //If there are not consecutive numbers, add this number to the result as is.
+			result += strconv.Itoa(list[i])
+			fmt.Println("Converted thing is")
+			fmt.Println(strconv.Itoa(list[i]))
+		} else { //If there are consectuive numbers, add the range to the result, & update the counter by the length of that range
+			result += consequtiveNumsToRange(list, i)
+			//a, err = strconv.Atoi(consequtiveNumsToRange(list, i))[2]
+			//b, err1 = strconv.Atoi(consequtiveNumsToRange(list, i))[0]
+			a, err = strconv.Atoi(consequtiveNumsToRange(list, i))
+			b, err1 = strconv.Atoi(consequtiveNumsToRange(list, i))
+			fmt.Println("a and b are: ")
+			fmt.Println(a)
+			fmt.Println(b)
+			if (err != nil) || (err1 != nil) {
+
+				incrementValue = a - b
+			}
+			i += incrementValue - 1
+		}
+		result += ","
+	}
+	return result
+}
+
 
 func main() {
 
