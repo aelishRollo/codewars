@@ -18,6 +18,20 @@ func lastDigit(num int) int { //returns the last digit of an
 	return result
 }
 
+func removeLastDigit(num int) int { 		//returns the int argument without its last digit
+	numAsString := strconv.Itoa(num)
+	tempResult := ""
+	for i := 0; i < len(numAsString)-1; i++ {
+		tempResult += string(numAsString[i])
+	}
+	result, err := strconv.Atoi(string(tempResult))
+	if err != nil {
+		fmt.Println("Oh no, an error occurred!")
+	}
+	return result
+}
+
+
 func main() {
 
 	a := 123456
