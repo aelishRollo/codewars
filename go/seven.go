@@ -31,6 +31,14 @@ func removeLastDigit(num int) int { 		//returns the int argument without its las
 	return result
 }
 
+func isTwoDigitMultipleOfSeven(num int) bool { //returns a bool representing whether the argument is a two digit multiple of seven
+	result := false
+	if (num%7 == 0) && (num < 100) {
+		result = true
+	}
+	return result
+}
+
 
 func main() {
 
