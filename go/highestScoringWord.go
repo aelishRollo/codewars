@@ -6,3 +6,11 @@ func scoreFromWord(word string) int {  		//returns the score of a string, as an 
 	}
 	return result
 }
+
+
+
+
+
+
+//for each word in the array, create a dictionary entry associating its text with its score
+//then iterate through and find the highest score, returning the associated string
