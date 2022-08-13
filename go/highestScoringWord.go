@@ -38,3 +38,6 @@ func main() {
 	fmt.Println(m)
 }
 
+
+// just need to create a slice of all the values, then get the max of that slice
+//then return the string associated with that int
