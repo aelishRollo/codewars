@@ -86,6 +86,21 @@ func adjacentWizards(str string, i int) string {
 //Now that wizards are able to be taken care of (edge case in case the second rune is a wizard, need to take care of that), we can write this loop which sums the powers to find the victors.
 
 func main() {
+	totalPower := 0
+	str := "itsinjcandlezs"
+
+	for i := 0; i < len(str); i++ {
+		if isRightLetter(string(str[i])) && adjacentWizards(string(str[i])) == "left" {
+			result += -power(str[i])
+		} else if isLeftLetter(string(str[i])) && adjacentWizards(string(str[i])) == "right" {
+			result += -power(str[i])
+		} else {
+			result += power(str[i])
+		}
+
+	}
+
+
 
 
 	//for letters in string {
