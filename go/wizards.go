@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -34,15 +33,14 @@ func power(str string) int { // Returns positive numbers for left side, negative
 
 func isRightLetter(str string) bool {
 	result := false
-	if (str == "m") || (str == "q") || (str == "d") || (str == "z") || (str == "j") {		//returns whether the letter is a letter in the Right group
+	if (str == "m") || (str == "q") || (str == "d") || (str == "z") || (str == "j") { //returns whether the letter is a letter in the Right group
 		result = true
 	}
 	return result
 
 }
 
-
-func isLeftLetter(str string) bool {			//returns whether the letter is a letter in the Left group
+func isLeftLetter(str string) bool { //returns whether the letter is a letter in the Left group
 	result := false
 	if (str == "w") || (str == "p") || (str == "b") || (str == "s") || (str == "t") {
 		result = true
@@ -80,17 +78,31 @@ func adjacentWizards(str string, i int) string {
 		result = "none"
 	}
 	return result
-} 
+}
 
 //iterate through each char in the string. Maintain a total, adding each member to the result. Otherwise
 //Now that wizards are able to be taken care of (edge case in case the second rune is a wizard, need to take care of that), we can write this loop which sums the powers to find the victors.
 
 func main() {
-	totalPower := 0
+	//totalPower := 0
 	str := "itsinjcandlezs"
+	result := 0
 
 	for i := 0; i < len(str); i++ {
-		if isRightLetter(string(str[i])) && adjacentWizards(string(str[i])) == "left" {
+
+		if i == 0 { //Edge case for first character
+			if isRightLetter(string(str[0])) && str[1] == "t" {
+				result += -power(str[0])
+			} else if isLeftLetter(string(str[0])) && str[1] == "j" {
+				result += -power(str[0])
+			}
+		} else if i == len(str)-1 { //Edge case for last character
+			if isRightLetter(string(str[len(str)-1])) && str[len(str)-2] == "t" {
+				result += -power(str[0])
+			} else if isLeftLetter(string(str[len(str)-1])) && str[len(str)-2] == "j" {
+				result += -power(str[0])
+			}
+		} else if isRightLetter(string(str[i])) && adjacentWizards(string(str[i])) == "left" {
 			result += -power(str[i])
 		} else if isLeftLetter(string(str[i])) && adjacentWizards(string(str[i])) == "right" {
 			result += -power(str[i])
@@ -98,19 +110,9 @@ func main() {
 			result += power(str[i])
 		}
 
+		fmt.Println(result)
+
 	}
-
-
-
-
-	//for letters in string {
-		//if isRightLetter(letter) && adjacentWizards(letter) == "left" {
-			result += -power(letter)
-		} else if isLeftLetter(letter) && adjacentWizards(letter) == "right" {
-			result += -power(letter)
-		} else result += power(letter)
-		//result += power(letter)	
-	//}
 
 	a := "Its"
 	b := "invogue"
@@ -126,4 +128,3 @@ func main() {
 	fmt.Println(power("z"))
 	fmt.Println(power("j"))
 }
-
