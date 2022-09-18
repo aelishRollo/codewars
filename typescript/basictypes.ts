@@ -1,8 +1,8 @@
 export var var1Boolean: boolean = true;
 export var var2Decimal: decimal = 13;
-export var var3Hex: hex = f00d;
-export var var4Binary: binary = 111111;
-export var var5Octal: octal = 744;
+export var var3Hex: hex = 0xf00d;
+export var var4Binary: binary = 0b111111;
+export var var5Octal: octal = 0o744;
 
 export var var6String:  string = "Hello, World!";
 
