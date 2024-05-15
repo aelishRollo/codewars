@@ -1,2 +1,2 @@
 # codewars
-Code for codewars katas
+Code for codewars katas, organized by language
