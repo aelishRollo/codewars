@@ -1,2 +1,2 @@
 # codewars
-Code for codewars katas, organized by language
+Daily Coding Exercises to sharpen problem solving skills
