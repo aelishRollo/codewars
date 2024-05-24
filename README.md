@@ -2,7 +2,7 @@
 # CodeWars Challenges: <a target="_blank" href="https://www.codewars.com/users/aelishRollo" >Visit Here</a> 
 
 
-A repository filled with codewars challenges (kata). Currently Ranked in the top 30% on the global leaderboard, I push at least 5 solutions every week.
+A repository filled with codewars challenges (kata). Currently Ranked in the top 25% on the global leaderboard, I push at least 5 solutions every week.
 
 ## How It's Made:
 
@@ -18,4 +18,4 @@ I consistently refactor and optimize my code, sometimes for efficiency, sometime
 
 ## Lessons Learned:
 
-The Biggest Lesson I learned in tackling this endless supply of questions is understanding that there is a long way to go. Not being able to answer a question is okay, as long as you take the initiative to improve.
+The Biggest Lesson I learned in tackling this endless supply of questions is understanding that there is a long way to go. Not being able to answer a question is okay, as long as you take the initiative to improve. There's always opportunity to grow!
