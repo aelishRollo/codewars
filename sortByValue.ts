@@ -30,3 +30,4 @@ export function sortByValueAndIndex(array:number[]) : number[] {
 console.log('Auto-update for sortByValue.ts');
 console.log('Auto-update for sortByValue.ts');
 console.log('Auto-update for sortByValue.ts');
+console.log('Auto-update for sortByValue.ts');
