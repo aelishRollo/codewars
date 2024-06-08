@@ -27,3 +27,4 @@ export function sortByValueAndIndex(array:number[]) : number[] {
   //corresponds to, and put that in the result array
   
   //return the result array
+console.log('Auto-update for sortByValue.ts');
