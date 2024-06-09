@@ -1,0 +1,36 @@
+name: Auto-Commit Changes
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # This will run every day at 12:00 UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Make changes and commit
+      run: |
+        FILES=("arrayPlusArray.ts" "basicOperations.ts" "calculateAverage.ts" "drawStairs.ts" "fakeBinary.ts" "invertValues.ts" "IPAddress.ts" "multiply.ts" "powersOfTwo.ts" "sumMixedArray.ts")
+        DAY=$(($(date +%j) % 10))  # Get the day of the year modulo 10 to cycle through the files
+        FILE_TO_COMMIT=${FILES[$DAY]}
+        
+        # Check if the file exists and make a change (or create it if it doesn't exist)
+        if [ -f "$FILE_TO_COMMIT" ]; then
+          echo "Updating $FILE_TO_COMMIT"
+          echo "console.log('Auto-update for $FILE_TO_COMMIT');" >> $FILE_TO_COMMIT
+        else
+          echo "Creating $FILE_TO_COMMIT"
+          echo "console.log('Auto-update for $FILE_TO_COMMIT');" > $FILE_TO_COMMIT
+        fi
+        
+        git config --global user.name 'aelishRollo'
+        git config --global user.email 'alecrollison@icloud.com'
+        git add $FILE_TO_COMMIT
+        git commit -m "Auto-update $FILE_TO_COMMIT"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
