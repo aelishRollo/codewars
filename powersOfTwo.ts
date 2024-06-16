@@ -5,3 +5,4 @@ export function powersOfTwo(n:number):number[]{
     }
     return result
   }
+console.log('Auto-update for powersOfTwo.ts');
