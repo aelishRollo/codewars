@@ -8,3 +8,4 @@ export const arrayPlusArray = (arr1 : number[], arr2 : number[]) : number => {
   //Param: two arrays
   
   //Return: sum of all elements of each array
+console.log('Auto-update for arrayPlusArray.ts');

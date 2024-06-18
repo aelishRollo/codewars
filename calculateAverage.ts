@@ -6,3 +6,4 @@ export function findAverage(array: number[]): number {
       return sum / array.length
     }
   }
+console.log('Auto-update for calculateAverage.ts');
