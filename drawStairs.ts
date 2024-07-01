@@ -18,3 +18,4 @@ export function drawStairs(n: number): string {
   }
   console.log('Auto-update for drawStairs.ts');
 console.log('Auto-update for drawStairs.ts');
+console.log('Auto-update for drawStairs.ts');
