@@ -12,3 +12,4 @@ export const fakeBin = (x:string):string => {
   console.log('Auto-update for fakeBinary.ts');
 console.log('Auto-update for fakeBinary.ts');
 console.log('Auto-update for fakeBinary.ts');
+console.log('Auto-update for fakeBinary.ts');
