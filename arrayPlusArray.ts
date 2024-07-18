@@ -11,3 +11,4 @@ export const arrayPlusArray = (arr1 : number[], arr2 : number[]) : number => {
 console.log('Auto-update for arrayPlusArray.ts');
 console.log('Auto-update for arrayPlusArray.ts');
 console.log('Auto-update for arrayPlusArray.ts');
+console.log('Auto-update for arrayPlusArray.ts');
