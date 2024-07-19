@@ -8,3 +8,5 @@ export function findAverage(array: number[]): number {
   }
 console.log('Auto-update for calculateAverage.ts');
 console.log('Auto-update for calculateAverage.ts');
+console.log('Auto-update for calculateAverage.ts');
+console.log('Auto-update for calculateAverage.ts');
