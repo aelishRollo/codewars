@@ -19,7 +19,7 @@
 # CodeWars Challenges: <a target="_blank" href="https://www.codewars.com/users/aelishRollo" >Visit Here</a> 
 
 
-A repository filled with codewars challenges (kata). Currently Ranked in the top 5% on the global leaderboard and ranked 4 kyu, I push at least 5 solutions every week.
+A repository filled with codewars challenges (kata). Currently Ranked in the top 3% on the global leaderboard and ranked 4 kyu, I push at least 5 solutions every week.
 
 ## How It's Made:
 
