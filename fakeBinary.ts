@@ -44,3 +44,4 @@ console.log('Auto-update for fakeBinary.ts');
 console.log('Auto-update for fakeBinary.ts');
 console.log('Auto-update for fakeBinary.ts');
 console.log('Auto-update for fakeBinary.ts');
+console.log('Auto-update for fakeBinary.ts');
